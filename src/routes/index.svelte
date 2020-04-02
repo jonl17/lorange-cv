@@ -8,7 +8,7 @@
 <style>
   .section-wrap {
     display: grid;
-    grid-template-columns: 0.3fr 0.8fr 0.4fr;
+    grid-template-columns: 0.3fr 0.8fr 0.3fr;
     position: relative;
     top: 0;
     left: 0;
@@ -27,7 +27,7 @@
   <Section name="Jón Gabríel Lorange">
     <Bio />
   </Section>
-  <Section name="Verkefni">
+  <Section name="⌨ Kóðun">
     <Vefir />
   </Section>
   <Section name="Tónlist">

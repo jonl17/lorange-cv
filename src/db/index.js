@@ -48,36 +48,42 @@ export const vefir = [
     nafn: "Skjaldborg",
     url: "https://skjaldborg.is/",
     image:
-      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849126/cv/skjaldborg_yxrq2r.png"
+      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849126/cv/skjaldborg_yxrq2r.png",
+    videoUrl: "skjaldborg_op0x66.mp4"
   },
   {
     nafn: "Hjörtur Jóhannson",
     url: "https://hjorturjohannsson.com/",
     image:
-      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849123/cv/hjortur_hmaq0r.png"
+      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849123/cv/hjortur_hmaq0r.png",
+    videoUrl: "hjortur_qz4lqj.mp4"
   },
   {
     nafn: "Borgarlínan",
     url: "https://www.borgarlinan.is/",
     image:
-      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849126/cv/borgarlinan_mrlmph.png"
+      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849126/cv/borgarlinan_mrlmph.png",
+    videoUrl: "borgarlinan_sbph35.mp4"
   },
   {
     nafn: "Jól í Hjarta",
     url: "https://www.jolihjarta.is/",
     image:
-      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849123/cv/jolihjarta_hkhq9r.png"
+      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849123/cv/jolihjarta_hkhq9r.png",
+    videoUrl: "jolihjarta_wfubdr.mp4"
   },
   {
     nafn: "Emma Heiðarsdóttir",
     url: "https://emmaheidarsdottir.info/",
     image:
-      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849124/cv/emma_i2osbl.png"
+      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849124/cv/emma_i2osbl.png",
+    videoUrl: "emma_ewwup1.mp4"
   },
   {
     nafn: "TVIST",
     url: "https://tvist.is/",
     image:
-      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849127/cv/tvist_xrtczq.png"
+      "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849127/cv/tvist_xrtczq.png",
+    videoUrl: "tvist_n2byz1.mp4"
   }
 ];

@@ -13,7 +13,7 @@
   }
 </style>
 
-<div class="container">
+<div id="scrollArea" class="container">
   <h1 class="title">{name}</h1>
   <slot />
 </div>

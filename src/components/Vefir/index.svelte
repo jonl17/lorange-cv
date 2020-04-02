@@ -1,6 +1,7 @@
 <script>
   import { vefir } from "src/db";
   import Vefur from "src/components/Vefir/Vefur.svelte";
+  import IntersectionObserver from "./IntersectionObserver.svelte";
 </script>
 
 <style>
@@ -12,6 +13,10 @@
 
 <div>
   {#each vefir as vefur}
-    <Vefur {vefur} />
+    <IntersectionObserver let:intersecting>
+
+      <Vefur {vefur} />
+
+    </IntersectionObserver>
   {/each}
 </div>
