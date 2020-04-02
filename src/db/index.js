@@ -52,7 +52,7 @@ export const vefir = [
     videoUrl: "skjaldborg_op0x66.mp4"
   },
   {
-    nafn: "Hjörtur Jóhannson",
+    nafn: "Hjörtur Jóhannsson",
     url: "https://hjorturjohannsson.com/",
     image:
       "https://res.cloudinary.com/dgekvli3k/image/upload/v1585849123/cv/hjortur_hmaq0r.png",

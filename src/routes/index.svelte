@@ -27,7 +27,7 @@
   <Section name="Jón Gabríel Lorange">
     <Bio />
   </Section>
-  <Section name="⌨ Kóðun">
+  <Section name="Kóðun">
     <Vefir />
   </Section>
   <Section name="Tónlist">
