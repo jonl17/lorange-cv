@@ -23,6 +23,6 @@
       })
       .transformation()
       .toHtml()}
-    <Details nafn={vefur.nafn} />
+    <Details {vefur} />
   </div>
 {/if}

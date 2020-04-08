@@ -1,6 +1,8 @@
 <script>
   export let stack = ["js", "firebase", "netlify cms"];
   export let nafn = "Nafn";
+
+  export let vefur;
 </script>
 
 <style>
@@ -19,7 +21,7 @@
 </style>
 
 <div class="wrap">
-  <p class="subtitle">{nafn}</p>
+  <a href="/" class="subtitle">{nafn}</a>
   {#if stack}
     <div class="stack">
       {#each stack as item, i}
