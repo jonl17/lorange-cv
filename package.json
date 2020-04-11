@@ -1,5 +1,5 @@
 {
-  "name": "TODO",
+  "name": "jon_gabriel_lorange",
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
@@ -9,7 +9,8 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "deploy": "sapper export --legacy && firebase deploy"
   },
   "dependencies": {
     "cloudinary-core": "^2.8.2",

@@ -1,3 +1,8 @@
+<script>
+  import { metadata } from "src/db";
+  import { icelandic } from "src/store";
+</script>
+
 <style>
   .wrap {
     display: grid;
@@ -12,15 +17,11 @@
 </style>
 
 <div class="wrap">
-  <p class="texti">
-    Fæddur og uppalin á Íslandi. Mörður í húð og hár. Ert alltaf að búa til
-    vefsíður og að forritað fullt af stuffi. Plús það er ég líka mjúsíkantus með
-    meiru! Algjör sjarmur!
-  </p>
+  <p class="texti">{$icelandic ? metadata.about.is : metadata.about.en}</p>
   <div class="contact-wrap">
-    <p class="subtitle">Contact:</p>
-    <p>jglorange@gmail.com</p>
-    <p>+354 618 1964</p>
+    <p class="subtitle">{$icelandic ? 'Hafðu samband' : 'Contact'}</p>
+    <p>{metadata.contact.email}</p>
+    <p>{metadata.contact.tel}</p>
   </div>
   <img
     src="https://res.cloudinary.com/dgekvli3k/image/upload/v1585672982/nonni-motto1_wlaswz.jpg"

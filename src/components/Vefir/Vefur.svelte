@@ -1,13 +1,16 @@
 <script>
   import cloudinary from "cloudinary-core";
   import Details from "./Details.svelte";
+  import {onMount} from "svelte"
 
   const cl = new cloudinary.Cloudinary({
     cloud_name: "dgekvli3k",
     secure: true
   });
 
+
   export let vefur;
+ 
 </script>
 
 {#if vefur}
