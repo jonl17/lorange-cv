@@ -2,6 +2,9 @@
   import { vefir } from "src/db";
   import Vefur from "src/components/Vefir/Vefur.svelte";
   import IntersectionObserver from "./IntersectionObserver.svelte";
+  import { onMount } from "svelte";
+
+  let width = 0;
 </script>
 
 <style>
@@ -11,12 +14,18 @@
   }
 </style>
 
+<svelte:window bind:innerWidth={width} />
+
 <div>
   {#each vefir as vefur}
-    <IntersectionObserver let:intersecting>
+    {#if width > 900}
+      <IntersectionObserver let:intersecting>
 
+        <Vefur {vefur} />
+
+      </IntersectionObserver>
+    {:else}
       <Vefur {vefur} />
-
-    </IntersectionObserver>
+    {/if}
   {/each}
 </div>

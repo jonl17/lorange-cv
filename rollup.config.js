@@ -37,7 +37,8 @@ export default {
       alias(aliases),
       replace({
         "process.browser": true,
-        "process.env.NODE_ENV": JSON.stringify(mode)
+        "process.env.NODE_ENV": JSON.stringify(mode),
+        "process.env.GIT_TOKEN": process.env.GIT_TOKEN
       }),
       svelte({
         dev,
@@ -51,33 +52,33 @@ export default {
       commonjs(),
 
       legacy &&
-        babel({
-          extensions: [".js", ".mjs", ".html", ".svelte"],
-          runtimeHelpers: true,
-          exclude: ["node_modules/@babel/**"],
-          presets: [
-            [
-              "@babel/preset-env",
-              {
-                targets: "> 0.25%, not dead"
-              }
-            ]
-          ],
-          plugins: [
-            "@babel/plugin-syntax-dynamic-import",
-            [
-              "@babel/plugin-transform-runtime",
-              {
-                useESModules: true
-              }
-            ]
+      babel({
+        extensions: [".js", ".mjs", ".html", ".svelte"],
+        runtimeHelpers: true,
+        exclude: ["node_modules/@babel/**"],
+        presets: [
+          [
+            "@babel/preset-env",
+            {
+              targets: "> 0.25%, not dead"
+            }
           ]
-        }),
+        ],
+        plugins: [
+          "@babel/plugin-syntax-dynamic-import",
+          [
+            "@babel/plugin-transform-runtime",
+            {
+              useESModules: true
+            }
+          ]
+        ]
+      }),
 
       !dev &&
-        terser({
-          module: true
-        })
+      terser({
+        module: true
+      })
     ],
 
     onwarn
@@ -90,7 +91,8 @@ export default {
       alias(aliases),
       replace({
         "process.browser": false,
-        "process.env.NODE_ENV": JSON.stringify(mode)
+        "process.env.NODE_ENV": JSON.stringify(mode),
+        "process.env.GIT_TOKEN": process.env.GIT_TOKEN
       }),
       svelte({
         generate: "ssr",
@@ -103,7 +105,7 @@ export default {
     ],
     external: Object.keys(pkg.dependencies).concat(
       require("module").builtinModules ||
-        Object.keys(process.binding("natives"))
+      Object.keys(process.binding("natives"))
     ),
 
     onwarn

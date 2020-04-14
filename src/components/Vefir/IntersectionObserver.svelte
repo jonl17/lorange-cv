@@ -17,10 +17,11 @@
       const observer = new IntersectionObserver(
         entries => {
           intersecting = entries[0].isIntersecting;
+          let videoElem = entries[0].target.childNodes[0].childNodes[0];
           if (intersecting) {
-            console.log(entries[0].target.childNodes[0].childNodes[0].play());
+            videoElem.play();
           } else {
-            entries[0].target.childNodes[0].childNodes[0].pause();
+            videoElem.pause();
           }
           if (intersecting && once) {
             observer.unobserve(container);

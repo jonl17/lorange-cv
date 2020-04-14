@@ -1,31 +1,70 @@
 <script>
   import cloudinary from "cloudinary-core";
   import Details from "./Details.svelte";
-  import {onMount} from "svelte"
+  import PlayBtn from "./playBtn.svelte";
+  import { onMount } from "svelte";
 
   const cl = new cloudinary.Cloudinary({
     cloud_name: "dgekvli3k",
     secure: true
   });
 
-
   export let vefur;
- 
+  let playing = false;
+  let browserWidth;
+
+  const setPlayBtnsHeight = () => {
+    let vid = document.getElementById(vefur.publicId);
+    let btns = document.getElementsByClassName("play-btn");
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].style.height = vid.clientHeight + "px";
+    }
+  };
+
+  onMount(() => {
+    setPlayBtnsHeight();
+    if (browserWidth <= 900) {
+      document
+        .getElementById(vefur.publicId)
+        .addEventListener("click", () => pause());
+    }
+  });
+
+  const play = () => {
+    document.getElementById(vefur.publicId).play();
+    playing = true;
+  };
+  const pause = () => {
+    if (browserWidth <= 900) {
+      // only on mobile devices!
+      document.getElementById(vefur.publicId).pause();
+      playing = false;
+    }
+  };
 </script>
+
+<style>
+  .vefur-wrap {
+    position: relative;
+  }
+</style>
+
+<svelte:window bind:innerWidth={browserWidth} on:resize={setPlayBtnsHeight} />
 
 {#if vefur}
   <div class="vefur-wrap">
     {@html cl
-      .videoTag('cv/' + vefur.videoUrl, {
-        secure: true,
-        width: '100%',
-        autoplay: false,
+      .videoTag(vefur.publicId, {
+        quality: 'auto',
+        fetchFormat: 'auto',
+        id: vefur.publicId,
         muted: true,
         loop: true,
-        quality: 50
+        playsInline: true,
+        style: 'width: 100%; position: relative;'
       })
-      .transformation()
       .toHtml()}
+    <PlayBtn {playing} on:trigger={play} />
     <Details {vefur} />
   </div>
 {/if}

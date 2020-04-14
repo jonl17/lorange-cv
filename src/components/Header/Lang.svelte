@@ -18,6 +18,15 @@
     background: transparent;
     color: inherit;
   }
+
+  @media (max-width: 900px) {
+    div {
+      width: auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
 </style>
 
 <div on:click={icelandic.set(!$icelandic)}>

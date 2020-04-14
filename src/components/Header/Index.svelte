@@ -1,6 +1,8 @@
 <script>
   import Lang from "./Lang.svelte";
+  import Mode from "./Mode.svelte";
   import { metadata } from "src/db";
+  import { darkMode } from "src/store";
 </script>
 
 <style>
@@ -28,22 +30,45 @@
     box-sizing: border-box;
     padding: 15px;
   }
+
+  @media (max-width: 900px) {
+    .main-wrap {
+      flex-direction: row;
+      margin: 0;
+      overflow: visible;
+      height: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1.5rem;
+    }
+    .section-wrap {
+      flex-direction: row;
+      align-items: center;
+    }
+    img {
+      width: auto;
+      height: 100%;
+      max-height: 65px;
+      color: var(--color);
+    }
+  }
 </style>
 
 <div class="main-wrap">
   <div class="section-wrap top">
     <Lang />
+    <Mode />
   </div>
   <div class="section-wrap bottom">
     <a href={metadata.contact.github} target="_blank">
       <img
         alt="github-logo"
-        src="https://res.cloudinary.com/dgekvli3k/image/upload/v1586599301/git_vw9cld.png" />
+        src={$darkMode ? './git-white.svg' : './git.svg'} />
     </a>
     <a href={metadata.contact.spotify} target="_blank">
       <img
         alt="spotify-logo"
-        src="https://res.cloudinary.com/dgekvli3k/image/upload/v1586599301/spotify_unx0ur.png" />
+        src={$darkMode ? './spotify-white.svg' : './spotify.svg'} />
     </a>
   </div>
 </div>

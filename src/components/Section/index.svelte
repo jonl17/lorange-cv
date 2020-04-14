@@ -11,6 +11,13 @@
   .container::-webkit-scrollbar {
     display: none;
   }
+
+  @media (max-width: 900px) {
+    .container {
+      overflow-y: visible;
+      margin-top: -35px;
+    }
+  }
 </style>
 
 <div id="scrollArea" class="container">
