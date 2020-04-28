@@ -4,7 +4,7 @@
 
   export let vefur;
 
-  let txtCollapsed = true;
+  let txtCollapsed = false;
 
   const toggleText = () => {
     txtCollapsed = !txtCollapsed;
@@ -19,7 +19,7 @@
     padding: 15px 0 25px 0;
   }
   p {
-    margin: 0.3rem;
+    margin: 0.3rem 0;
   }
   .heading > span {
     font-weight: bold;
@@ -68,9 +68,9 @@
     style="--scale:{txtCollapsed ? 'scaleY(0)' : 'scaleY(1)'}; --height:{txtCollapsed ? '0px' : 'auto'}"
     class="collapsable">
     <div class="about-wrap">
-      <p class="about">
+      <div class="about">
         {@html $icelandic ? vefur.about.is : vefur.about.en}
-      </p>
+      </div>
     </div>
     <p class="heading">
       <span>{$icelandic ? 'Samstarf: ' : 'Collaboration: '}</span>

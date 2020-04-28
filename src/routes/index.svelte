@@ -1,10 +1,10 @@
 <script>
-  import Section from "src/components/Section/index.svelte";
-  import Bio from "src/components/Bio/index.svelte";
-  import Vefir from "src/components/Vefir/index.svelte";
-  import Tonlist from "src/components/Tonlist/index.svelte";
-  import Header from "src/components/Header/index.svelte";
-  import { icelandic, darkMode } from "src/store";
+  import Section from "../components/Section/index.svelte";
+  import Bio from "../components/Bio/index.svelte";
+  import Vefir from "../components/Vefir/index.svelte";
+  import Tonlist from "../components/Tonlist/index.svelte";
+  import Header from "../components/Header/index.svelte";
+  import { icelandic, darkMode } from "../store";
 </script>
 
 <style>
@@ -18,10 +18,15 @@
     grid-gap: 35px;
     grid-template-columns: 0.03fr 0.3fr 0.8fr 0.3fr;
     overflow: hidden;
-    /* mode properties */
-    background: var(--background);
-    color: var(--color);
     transition: 0.2s ease-in-out;
+  }
+  .lightMode {
+    background: #fff;
+    color: #333;
+  }
+  .darkMode {
+    background: #333;
+    color: #fff;
   }
 
   /* mobile */
@@ -34,9 +39,7 @@
   }
 </style>
 
-<div
-  style="--background:{$darkMode ? '#333' : 'white'}; --color:{$darkMode ? 'white' : '#333'}"
-  class="section-wrap">
+<div class={$darkMode ? 'section-wrap darkMode' : 'section-wrap lightMode'}>
   <Header />
   <Section name="Jón Gabríel Lorange">
     <Bio />

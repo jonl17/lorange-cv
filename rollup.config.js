@@ -43,7 +43,7 @@ export default {
       svelte({
         dev,
         hydratable: true,
-        emitCss: true
+        emitCss: true,
       }),
       resolve({
         browser: true,
@@ -96,7 +96,7 @@ export default {
       }),
       svelte({
         generate: "ssr",
-        dev
+        dev,
       }),
       resolve({
         dedupe: ["svelte"]

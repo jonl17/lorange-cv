@@ -5,7 +5,7 @@
   import { onMount } from "svelte";
 
   const cl = new cloudinary.Cloudinary({
-    cloud_name: "dgekvli3k",
+    cloud_name: "balkan-studio",
     secure: true
   });
 

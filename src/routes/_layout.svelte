@@ -1,5 +1,5 @@
 <script>
-  import GoogleAnalytics from "src/components/GoogleAnalytics/index.svelte";
+  import GoogleAnalytics from "../components/GoogleAnalytics/index.svelte";
 </script>
 
 <GoogleAnalytics />

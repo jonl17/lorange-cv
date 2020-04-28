@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
-  let open = false;
+  let open = true;
   const dispatch = createEventDispatcher();
   const triggerOpen = () => {
     dispatch("trigger");
@@ -15,32 +15,24 @@
     display: flex;
     box-sizing: border-box;
     padding: 5px;
+    position: relative;
+    transition: 0.1s ease-in-out;
   }
   div:hover {
     cursor: pointer;
   }
   .ex {
-    flex-direction: column;
-    justify-content: center;
+    transform: rotate(180deg) translateX(10px);
   }
-  .burger {
-    position: relative;
-  }
-  .burger > span {
+  div > span {
     position: absolute;
     width: 50%;
     height: 50%;
   }
-  .burger > .two {
+  div > .two {
     transform: rotate(-45deg);
   }
-  .burger > .three {
-    transform: rotate(45deg);
-  }
-  .ex > .two {
-    transform: rotate(-45deg);
-  }
-  .ex > .three {
+  div > .three {
     transform: rotate(45deg);
   }
   span {

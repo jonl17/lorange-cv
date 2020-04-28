@@ -51,6 +51,22 @@
       max-height: 65px;
       color: var(--color);
     }
+    .cv {
+      padding-right: 15px;
+    }
+  }
+  .cv {
+    margin: 0 auto;
+    max-height: 65px;
+    height: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .cv > p {
+    padding-right: 5px;
   }
 </style>
 
@@ -60,6 +76,11 @@
     <Mode />
   </div>
   <div class="section-wrap bottom">
+    <a class="cv" href="JGL_CV.pdf" target="_blank">
+      <p class="subtitle">cv</p>
+
+      <i class="gg-attachment" />
+    </a>
     <a href={metadata.contact.github} target="_blank">
       <img
         alt="github-logo"
@@ -72,3 +93,4 @@
     </a>
   </div>
 </div>
+<link href="https://css.gg/attachment.css" rel="stylesheet" />
