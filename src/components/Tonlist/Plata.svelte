@@ -1,5 +1,5 @@
 <script>
-  export let plata;
+  export let album;
 </script>
 
 <style>
@@ -12,6 +12,8 @@
   }
 </style>
 
-<a href={plata.url} target="_blank">
-  <img src={plata.image} alt={plata.nafn} />
-</a>
+{#if album}
+  <a href={album.url} target="_blank">
+    <img src={album.image} alt={album.title} />
+  </a>
+{/if}

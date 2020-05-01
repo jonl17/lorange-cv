@@ -1,6 +1,7 @@
 <script>
   import { icelandic } from "src/store";
   import Burger from "src/components/Burger/index.svelte";
+  import { onMount } from "svelte";
 
   export let vefur;
 
@@ -57,7 +58,7 @@
   <div class="top-box">
     <div>
       <p>
-        <a target="_blank" href={vefur.url} class="subtitle">{vefur.nafn}</a>
+        <a target="_blank" href={vefur.url} class="subtitle">{vefur.title}</a>
       </p>
       <p class="year">{vefur.year}</p>
     </div>
@@ -69,7 +70,11 @@
     class="collapsable">
     <div class="about-wrap">
       <div class="about">
-        {@html $icelandic ? vefur.about.is : vefur.about.en}
+        {#if $icelandic}
+          {@html vefur.html.is}
+        {:else}
+          {@html vefur.html.en}
+        {/if}
       </div>
     </div>
     <p class="heading">
@@ -77,12 +82,12 @@
       {$icelandic ? vefur.collaboration.is : vefur.collaboration.en}
     </p>
     <p class="heading">
-      <span>{$icelandic ? 'Stakkur: ' : 'Stack: '}</span>
+      <span>{$icelandic ? 'Tækni notuð: ' : 'Tech used: '}</span>
       {vefur.stack}
     </p>
-    {#if vefur.git}
+    {#if vefur.github}
       <p class="heading">
-        <a target="_blank" href={vefur.git}>Github</a>
+        <a target="_blank" href={vefur.github}>Github</a>
       </p>
     {/if}
   </div>

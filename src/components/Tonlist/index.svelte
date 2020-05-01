@@ -1,6 +1,6 @@
 <script>
-  import { tonlist } from "src/db";
   import Plata from "./Plata.svelte";
+  import { albums } from "./albums";
 </script>
 
 <style>
@@ -12,7 +12,7 @@
 </style>
 
 <div class="wrap">
-  {#each tonlist as plata}
-    <Plata {plata} />
+  {#each albums as album}
+    <Plata {album} />
   {/each}
 </div>

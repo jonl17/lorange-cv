@@ -8,6 +8,8 @@ import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
 import alias from "@rollup/plugin-alias";
 import path from "path";
+import markdown from "@jackfranklin/rollup-plugin-markdown"
+import glob from "rollup-plugin-glob"
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -34,6 +36,8 @@ export default {
     input: config.client.input(),
     output: config.client.output(),
     plugins: [
+      glob(),
+      markdown(),
       alias(aliases),
       replace({
         "process.browser": true,
@@ -88,6 +92,8 @@ export default {
     input: config.server.input(),
     output: config.server.output(),
     plugins: [
+      glob(),
+      markdown(),
       alias(aliases),
       replace({
         "process.browser": false,

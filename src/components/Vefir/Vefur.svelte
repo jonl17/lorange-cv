@@ -14,7 +14,7 @@
   let browserWidth;
 
   const setPlayBtnsHeight = () => {
-    let vid = document.getElementById(vefur.publicId);
+    let vid = document.getElementById(vefur.video.publicId);
     let btns = document.getElementsByClassName("play-btn");
     for (let i = 0; i < btns.length; i++) {
       btns[i].style.height = vid.clientHeight + "px";
@@ -25,19 +25,19 @@
     setPlayBtnsHeight();
     if (browserWidth <= 900) {
       document
-        .getElementById(vefur.publicId)
+        .getElementById(vefur.video.publicId)
         .addEventListener("click", () => pause());
     }
   });
 
   const play = () => {
-    document.getElementById(vefur.publicId).play();
+    document.getElementById(vefur.video.publicId).play();
     playing = true;
   };
   const pause = () => {
     if (browserWidth <= 900) {
       // only on mobile devices!
-      document.getElementById(vefur.publicId).pause();
+      document.getElementById(vefur.video.publicId).pause();
       playing = false;
     }
   };
@@ -54,10 +54,10 @@
 {#if vefur}
   <div class="vefur-wrap">
     {@html cl
-      .videoTag(vefur.publicId, {
+      .videoTag(vefur.video.publicId, {
         quality: 'auto',
         fetchFormat: 'auto',
-        id: vefur.publicId,
+        id: vefur.video.publicId,
         muted: true,
         loop: true,
         playsInline: true,
