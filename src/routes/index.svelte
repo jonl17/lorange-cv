@@ -3,7 +3,7 @@
   import Bio from "../components/Bio/index.svelte";
   import Vefir from "../components/Vefir/index.svelte";
   import Tonlist from "../components/Tonlist/index.svelte";
-  import Header from "../components/Header/index.svelte";
+  import Header from "../components/Header/Index.svelte";
   import { icelandic, darkMode } from "../store";
 </script>
 
