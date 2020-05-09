@@ -3,7 +3,7 @@ title: borgarlinan.is
 url: https://www.borgarlinan.is/
 github: https://github.com/jonl17/borgarlinan
 video:
-  publicId: cv/borgarlinan_sbph35_1_djcdcs
+  publicId: borgo_p90vae
 collaboration:
   is: TVIST, auglýsingastofa.
   en: TVIST, advertising agency.

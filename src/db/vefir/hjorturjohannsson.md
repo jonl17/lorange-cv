@@ -3,7 +3,7 @@ title: hjorturjohannsson.com
 url: https://hjorturjohannsson.com/
 github: https://github.com/jonl17/HjorturIngvi
 video:
-  publicId: cv/hjortur_qz4lqj_zdz3xz
+  publicId: hjortur_qz4lqj_x3kyjw
 collaboration:
   is: Ívar Björnsson, grafískur hönnuður.
   en: Ívar Björnsson, graphic designer.

@@ -3,7 +3,7 @@ title: skjaldborg.is
 url: https://skjaldborg.is
 github: https://github.com/jonl17/skjaldborg
 video:
-  publicId: cv/skjaldborg_op0x66_pfhgit
+  publicId: skjaldborg_op0x66_jg3d79
 collaboration:
   is: Ívar Björnsson, grafískur hönnuður.
   en: Ívar Björnsson, graphic designer.

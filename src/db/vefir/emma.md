@@ -2,7 +2,7 @@
 title: emmaheidarsdottir.info
 url: https://emmaheidarsdottir.info/
 video:
-  publicId: cv/emma_ewwup1_klwvha
+  publicId: emma_ewwup1_paahyw
 collaboration:
   is: Emma Heiðarsdóttir, myndlistarmaður.
   en: Emma Heiðarsdóttir, visual artist.

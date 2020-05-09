@@ -3,7 +3,7 @@ title: jolihjarta.is
 url: https://jolihjarta.is/
 github: https://github.com/jonl17/jolihjarta
 video:
-  publicId: cv/jolihjarta_wfubdr_dnbq7f
+  publicId: jolihjarta_wfubdr_ld3gqg
 collaboration:
   is: Ívar Björnsson og Gnax Type, grafískir hönnuðir.
   en: Ívar Björnsson and Gnax Type, graphic designers.

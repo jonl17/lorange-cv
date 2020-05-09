@@ -24,6 +24,6 @@
     <p>{metadata.contact.tel}</p>
   </div>
   <img
-    src="https://res.cloudinary.com/dgekvli3k/image/upload/c_scale,f_auto,q_auto,w_901/v1585672982/nonni-motto1_wlaswz.jpg"
+    src="https://res.cloudinary.com/dbnti3by9/image/upload/v1589017454/nonni-motto1_wlaswz_yknzps.jpg"
     alt="self-portrait" />
 </div>

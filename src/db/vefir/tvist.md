@@ -2,7 +2,7 @@
 title: tvist.is
 url: https://www.tvist.is/
 video:
-  publicId: cv/tvist_n2byz1_er2nkr
+  publicId: tvist_n2byz1_ofthq2
 collaboration:
   is: TVIST, auglýsingastofa.
   en: TVIST, advertising agency.

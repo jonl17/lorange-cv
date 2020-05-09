@@ -1,6 +1,6 @@
 ---
 title: Moods
 url: https://tssforu.bandcamp.com/album/moods
-image: https://res.cloudinary.com/balkan-studio/image/upload/v1587895421/cv/music/moods_cqfkk6_eqgdxb.jpg
+image: https://f4.bcbits.com/img/a2862550970_16.jpg
 releaseDate: 2018-8-16
 ---
